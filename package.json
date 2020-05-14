@@ -1,0 +1,16 @@
+{
+  "name": "play-phrase-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "telebot": "^1.3.0"
+  }
+}
