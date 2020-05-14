@@ -4,7 +4,7 @@ const TeleBot = require('telebot');
 const bot = new TeleBot({
   token: process.env.TOKEN,
   webhook: {
-    url: 'https://play-phrase-me.herokuapp.com',
+    url: process.env.URL,
     port: process.env.PORT,
   },
 });
