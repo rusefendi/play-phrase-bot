@@ -30,17 +30,18 @@ bot.on('inlineQuery', (msg) => {
           if (err) {
             return console.log(err);
           }
-          body.phrases.forEach((phrase) => {
-            answers.addVideo({
-              id: phrase.id,
-              title: phrase['video-info'].info,
-              description: phrase.text,
-              thumb_url: 'https://avatarfiles.alphacoders.com/967/96712.jpg',
-              mime_type: 'video/mp4',
-              video_url: phrase['video-url'],
-              caption: phrase.text,
+          if (body.phrases)
+            body.phrases.forEach((phrase) => {
+              answers.addVideo({
+                id: phrase.id,
+                title: phrase['video-info'].info,
+                description: phrase.text,
+                thumb_url: 'https://avatarfiles.alphacoders.com/967/96712.jpg',
+                mime_type: 'video/mp4',
+                video_url: phrase['video-url'],
+                caption: phrase.text,
+              });
             });
-          });
         }
       );
     } catch (e) {
