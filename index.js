@@ -33,6 +33,7 @@ bot.on('inlineQuery', (msg) => {
             thumb_url: 'https://avatarfiles.alphacoders.com/967/96712.jpg',
             mime_type: 'video/mp4',
             video_url: phrase['video-url'],
+            caption: phrase.text,
           });
         });
       }
