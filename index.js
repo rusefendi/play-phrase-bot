@@ -3,6 +3,10 @@ const TeleBot = require('telebot');
 
 const bot = new TeleBot({
   token: process.env.TOKEN,
+  webhook: {
+    url: 'https://play-phrase-me.herokuapp.com',
+    port: process.env.PORT,
+  },
 });
 
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
